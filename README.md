@@ -44,6 +44,7 @@ And load them:
 >>## Start using *Trollo*
 <p>
 Require a server to test in local:
+  
 `composer require server --dev`
 
 And then run the server:
