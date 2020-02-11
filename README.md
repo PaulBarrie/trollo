@@ -11,12 +11,13 @@ Before starting using *Trollo*, make sure you have all the required dependencies
 - Composer
 
 >## Setting up *Trollo*
-
+<p>
 Once all these requirements are satisfied, you can start using *Trollo*. To do so, clone the git repository:
 
 `git clone github.com/PaulBarrie/trollo`
 
 >>### Setting up the database
+<p>
 Go to the app directory and change the `DATABASE_URL` value with your own configuration in the `.env` file. When this is done, you can create the database on your own MySQL server entering the following command line in the app directory:
 `php bin/console doctrine:database:create`
 
@@ -27,6 +28,7 @@ And finally migrate and run
 `php bin/console doctrine:migrations:migrate`
 
 >>>### Populate the database
+<p>
 In order to populate the database and fully enjoy trello at start you should load fixtures. Fixtures are made using fakers. Hence before making fixture load faker library:
 `composer require fzaninotto/faker`
 
@@ -40,6 +42,7 @@ And load them:
 `php bin/console make:fixtures`
 
 >>## Start using *Trollo*
+<p>
 Require a server to test in local:
 `composer require server --dev`
 
