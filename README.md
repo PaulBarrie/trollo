@@ -1,5 +1,5 @@
 # Trollo
-*Trollo* is a team project manager that allows you to manage your tasks, like Trello but en moins beau. 
+*Trollo* is a team project manager that allows you to manage your tasks. 
 
 >## Requirements
 
@@ -15,6 +15,10 @@ Before starting using *Trollo*, make sure you have all the required dependencies
 Once all these requirements are satisfied, you can start using *Trollo*. To do so, clone the git repository:
 
 `git clone github.com/PaulBarrie/trollo`
+
+Install packages that will help the application works running:
+
+`composer install`
 
 >>### Setting up the database
 <p>
