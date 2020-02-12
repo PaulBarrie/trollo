@@ -1,0 +1,32 @@
+{% extends '../base.html.twig'%}
+
+{% form_theme formTask 'bootstrap_4_layout.html.twig'  %}
+
+{% block body%}
+
+
+    <h1>Ajouter une nouvelle tâche </h1>
+
+    {{ form_start(formTask)}}
+
+    {{form_row(formTask.title,
+        {'label':'Titre',
+            'attr':{'placeholder':'Nom de votre tâche'}})
+    }}
+
+    {{form_row(formTask.description,
+        {'label':'Description',
+            'attr':{'placeholder':'Décrivez votre tâche'}})
+    }}
+
+    {{form_row(formTask.state,
+        {'label': 'Avancement'})
+    }}
+    {{form_row(formTask.deadline,
+        {'label': 'Date de rendue'})
+    }}
+    {{form_widget(formTask)}}
+    <button type="submit" class="btn btn-success"> Valider </button>
+    {{form_end(formTask)}}
+
+{% endblock %}

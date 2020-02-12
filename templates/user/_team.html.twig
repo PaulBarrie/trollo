@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h5> {{ d.name }} </h5>
+            {% for u in d.user %}
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <h6> {{ u.user }}</h6>
+                            <h6> {{u.email}} </h6>
+
+                        </h5>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

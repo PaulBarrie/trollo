@@ -1,0 +1,53 @@
+{% extends 'base.html.twig'%}
+
+{% form_theme form 'bootstrap_4_layout.html.twig'  %}
+{% block title %} Tâches {% endblock %}
+
+{% block body%}
+
+    <h1> Rechercher une tâche</h1>
+<div class="jumbotron">
+    <div class="container">
+        {{ form_start(form)}}
+        <div class="col">
+            {{form_row(form.name,
+                {'label':'Nom','attr':{'placeholder':'Nom de la tâche'}})
+            }}
+        </div>
+        <div class="col">
+            {{form_row(form.state,
+                {'label':'Etat d\'avancement de la tâche'})
+            }}
+        </div>
+        <div class="col">
+            {{form_row(form.priorOrder,
+                {'label':'Afficher les tâches les plus urgentes en premier'})
+            }}
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+            {{form_widget(form)}}
+                <button type="submit" class="btn btn-success"> Rechercher </button>
+            {{form_end(form)}}
+        </div>
+
+    </div>
+</div>
+
+
+    <h1> Vos tâches, {{ user }}</h1>
+
+    <div class="container">
+        <div class="row">
+            {% for d in data %}
+                <div class="col-4">
+                    {% include 'task/_tasks.html.twig' %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

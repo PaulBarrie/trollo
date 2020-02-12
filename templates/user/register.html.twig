@@ -1,0 +1,28 @@
+{% extends 'base.html.twig'%}
+
+{% form_theme formUser 'bootstrap_4_layout.html.twig'  %}
+
+{% block body%}
+
+    <h1> Enregistrez-vous ! </h1>
+
+    {{ form_start(formUser)}}
+
+    {{form_row(formUser.email,
+        {'label':'Email','attr':{'placeholder':'Email'}})
+    }}
+
+    {{form_row(formUser.password,
+        {'label':'Mot de passe',
+            'attr':{'placeholder':'Password'}}
+    )}}
+    {{form_row(formUser.password_conf,
+        {'label':'Confirmer le mot de passe',
+            'attr':{'placeholder':'Password'}}
+    )}}
+
+    {{form_widget(formUser)}}
+    <button type="submit" class="btn btn-success"> Continuer</button>
+    {{form_end(formUser)}}
+
+{% endblock %}

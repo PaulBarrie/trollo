@@ -1,0 +1,10 @@
+logout:
+    path: /logout
+index:
+    path: /
+    controller: App\Controller\UserTeamController::index
+
+task_delete:
+    path:     /task/delete/{id}
+    #defaults: { _controller: "App:Controller:TaskController:deleteTask" , format: ~ }
+    requirements: { _method: DELETE , id: \d+}

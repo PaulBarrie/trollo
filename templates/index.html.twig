@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1> Bienvenue sur Trollo ! </h1>
+
+    <p> Trollo est un gestionnaire de tâches qui vous permet de gérer vos projets d'équipe, comme Trello,
+        mais en moins beau.
+    </p>
+
+    <h2> Pas encore membre?? 😱 😱 </h2>
+    <button onclick="window.location.href='/register';"> S'inscrire </button>
+    <h2> Sinon, </h2>
+    <button onclick="window.location.href='/login';"> Se connecter </button>
+
+{% endblock %}

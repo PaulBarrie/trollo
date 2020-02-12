@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h5> {{ d.project_name }} </h5>
+            {% for t in d.task %}
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <h5><b> {{ t.title }} </b> </h5>
+                            <h6> Avancement: {{ t.state}}</h6>
+                            <h6> Du pour le : {{t.deadline}} </h6>
+                            <a class="navbar-toggler-icon" href="/task/delete/{{t.id}}"> del </a>
+                            <a class="navbar-toggler-icon" href="/task/edit/{{t.id}}"> edit </a>
+
+                        </h5>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

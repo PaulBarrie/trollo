@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %} Equipes {% endblock %}
+
+{% block body %}
+    <h1> Vos équipes, {{ user }}</h1>
+
+    <div class="container">
+        <div class="row">
+            {% for d in data %}
+                <div class="col-4">
+                    {% include 'user/_team.html.twig' %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}
